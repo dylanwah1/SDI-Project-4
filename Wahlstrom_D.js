@@ -5,7 +5,7 @@
 
 
 var MyLibrary = function() {
-
+//phone number
     var checkString = function(val) {
         var telNumber = val.length;
 
@@ -17,6 +17,7 @@ var MyLibrary = function() {
             }
         }
     };
+//check email
 var checkEmail = function(val) {
         var email = val.length;
 
@@ -28,23 +29,34 @@ var checkEmail = function(val) {
             }
         }
     };
-
+//time between date
 today=new Date()
-var myBirthday=new Date(today.getFullYear(), 11, 25) 
-if (today.getMonth()==11 && today.getDate()>25) 
-myBirthday.setFullYear(myBirthday.getFullYear()+1) 
-var one_day=1000*60*60*24
+	var myBirthday=new Date(today.getFullYear(), 11, 25) 
+	if (today.getMonth()==11 && today.getDate()>25) 
+	myBirthday.setFullYear(myBirthday.getFullYear()+1) 
+	var one_day=1000*60*60*24
 
 
 console.log(Math.ceil((myBirthday.getTime()-today.getTime())/(one_day))+
 " days left until birthday!")
 
+// number 42
+var checkNumeric = function(val) {
+	
+	if(isNaN(val)){
+		return false;
+	} else {
+		return true;
+	};
+	
+};
 
     
     
     return {
-        "checkString": checkString,
-        "checkEmail" : checkEmail
+        "checkString" : checkString,
+        "checkEmail"  : checkEmail,
+        "checkNumeric": checkNumeric
     };
 };
 
@@ -52,3 +64,4 @@ var newLib = new MyLibrary();
 
 console.log(newLib.checkString("404-555-3366"));
 console.log(newLib.checkEmail("123@123.com"));
+console.log(newLib.checkNumeric(42));
