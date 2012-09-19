@@ -59,13 +59,22 @@ var checkURL = function(val){
 	} else {
 		return false;
 	};
-};   
+};  
+// check decimal
+var checkDecimal = function(val){
+	if((val)>.51){
+		return true;
+	} else {
+		return false;
+	};
+};
     
     return {
         "checkString" : checkString,
         "checkEmail"  : checkEmail,
         "checkNumeric": checkNumeric,
-        "checkURL"    : checkURL
+        "checkURL"    : checkURL,
+        "checkDecimal": checkDecimal
     };
 };
 
@@ -75,3 +84,4 @@ console.log(newLib.checkString("404-555-3366"));
 console.log(newLib.checkEmail("123@123.com"));
 console.log(newLib.checkNumeric(42));
 console.log(newLib.checkURL("http://www.facebook.com"));
+console.log(newLib.checkDecimal(.88));
