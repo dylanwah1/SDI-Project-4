@@ -51,12 +51,21 @@ var checkNumeric = function(val) {
 	
 };
 
-    
+//check url
+var checkURL = function(val){
+	var first = val.substring(0,val.indexOf(":"));
+	if((first === "http") || (first === "https")){
+		return true;
+	} else {
+		return false;
+	};
+};   
     
     return {
         "checkString" : checkString,
         "checkEmail"  : checkEmail,
-        "checkNumeric": checkNumeric
+        "checkNumeric": checkNumeric,
+        "checkURL"    : checkURL
     };
 };
 
@@ -65,3 +74,4 @@ var newLib = new MyLibrary();
 console.log(newLib.checkString("404-555-3366"));
 console.log(newLib.checkEmail("123@123.com"));
 console.log(newLib.checkNumeric(42));
+console.log(newLib.checkURL("http://www.facebook.com"));
