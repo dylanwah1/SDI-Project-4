@@ -7,13 +7,14 @@ var myLibrary = function(){
 
 var checkString = function(val){
 
-	var telNumber = val.length
+	var telNumber = val.length;
 	for(var i=0; i <= telnumber; i++){
 		if(val.substring(i, i+1) === "-"){
 			return true;
 		} else {
 			return false;
 		};
+		
 
 
 
@@ -27,4 +28,5 @@ var checkString = function(val){
 
 var newLib = new myLibrary();
 
-console.log(newLib.checkString + "404-555-3366");
+console.log(newLib.checkString("404-555-3366"));
+};
