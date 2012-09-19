@@ -25,7 +25,6 @@ var checkString = function(val){
 
 };
 
-var newLib = new myLibrary();{
+var newLib = new myLibrary();
 
-console.log(newLib.checkString "404-555-3366");
-
+console.log(newLib.checkString + "404-555-3366");
