@@ -38,10 +38,10 @@ var MyLibrary = function() {
         };
 
     };
-    // number 42
+    // number42
     var checkNumeric = function(val) {
 
-        if (isNaN(val)) {
+        if ((val) === "42") {
             return false;
         } else {
             return true;
@@ -82,6 +82,6 @@ var newLib = new MyLibrary();
 console.log(newLib.checkString("404-555-3366"));
 console.log(newLib.checkEmail("123@123.com"));
 console.log(newLib.checkTotal([0 + 1 + 2 + 3]));
-console.log(newLib.checkNumeric(42));
+console.log(newLib.checkNumeric("42"));
 console.log(newLib.checkURL("http://www.facebook.com"));
 console.log(newLib.checkDecimal(2.10));
