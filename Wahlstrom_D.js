@@ -8,9 +8,8 @@ var MyLibrary = function() {
 //phone number
     var checkString = function(val) {
         var telNumber = val.length;
-
-        for (var i = 0; i < telNumber; i++) {
-            if (val.substring(i, i + 0) === "-") {
+		 for (var i = 0; i < telNumber; i++) {
+            if (telNumber.indexOf === "-") {
                 return true;
             } else {
                 return false;
@@ -30,15 +29,13 @@ var checkEmail = function(val) {
         }
     };
 //time between date
-today=new Date()
-	var myBirthday=new Date(today.getFullYear(), 11, 25) 
-	if (today.getMonth()==11 && today.getDate()>25) 
-	myBirthday.setFullYear(myBirthday.getFullYear()+1) 
-	var one_day=1000*60*60*24
+function printElapsedTime (fTest) {
+    var nStartTime = Date.now(), vReturn = fTest(), nEndTime = Date.now();
+    alert("Elapsed time: " + String(nEndTime - nStartTime) + " milliseconds");
+    return vReturn;
+}
 
 
-console.log(Math.ceil((myBirthday.getTime()-today.getTime())/(one_day))+
-" days left until birthday!")
 
 // number 42
 var checkNumeric = function(val) {
@@ -72,6 +69,7 @@ var checkDecimal = function(val){
     return {
         "checkString" : checkString,
         "checkEmail"  : checkEmail,
+        "checkDate"   :	checkDate,
         "checkNumeric": checkNumeric,
         "checkURL"    : checkURL,
         "checkDecimal": checkDecimal
@@ -82,6 +80,7 @@ var newLib = new MyLibrary();
 
 console.log(newLib.checkString("404-555-3366"));
 console.log(newLib.checkEmail("123@123.com"));
+console.log(newLib.checkDate("12/25/1987"));
 console.log(newLib.checkNumeric(42));
 console.log(newLib.checkURL("http://www.facebook.com"));
 console.log(newLib.checkDecimal(2.10));
