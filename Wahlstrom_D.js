@@ -62,7 +62,7 @@ var checkURL = function(val){
 };  
 // check decimal
 var checkDecimal = function(val){
-	if((val)>.51){
+	if((val) === 2.1){
 		return true;
 	} else {
 		return false;
@@ -84,4 +84,4 @@ console.log(newLib.checkString("404-555-3366"));
 console.log(newLib.checkEmail("123@123.com"));
 console.log(newLib.checkNumeric(42));
 console.log(newLib.checkURL("http://www.facebook.com"));
-console.log(newLib.checkDecimal(.88));
+console.log(newLib.checkDecimal(2.10));
